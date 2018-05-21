@@ -4,6 +4,15 @@ import Navigation exposing (Location)
 import Models exposing (PlayerId, Route(..))
 import UrlParser exposing (..)
 
+playersPath : String
+playersPath =
+    "#players"
+
+
+playerPath : PlayerId -> String
+playerPath id =
+    "#players/" ++ id
+
 
 matchers : Parser (Route -> a) a
 matchers =
